@@ -52,9 +52,15 @@ class ImageFragment : Fragment() {
                 }
             }
     }
-    override fun onActivityCreated(saveInstanceState: Bundle?) {
+    /*override fun onActivityCreated(saveInstanceState: Bundle?) {
         super.onActivityCreated(saveInstanceState)
         imageResId?.let{
+            binding.imageView.setImageResource(it)
+        }
+    }*/
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        imageResId?.let {
             binding.imageView.setImageResource(it)
         }
     }
